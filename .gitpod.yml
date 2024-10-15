@@ -1,0 +1,13 @@
+image: workshop-image:latest
+
+tasks:
+  - name: Setup LLM
+    command: |
+      if [ ! -z "$LLM_API_KEY" ]; then
+        llm keys set openai "$LLM_API_KEY"
+        echo "LLM API key has been set."
+      fi
+
+ports:
+  - port: 8080
+    onOpen: open-preview
