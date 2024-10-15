@@ -1,4 +1,5 @@
-image: workshop-image:latest
+image:
+  file: .gitpod.Dockerfile
 
 tasks:
   - name: Setup LLM
